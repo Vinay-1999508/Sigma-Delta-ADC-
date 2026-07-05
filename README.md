@@ -1,10 +1,10 @@
-# ⚡ Mixed-Signal Sigma-Delta ADC Pipeline (End-to-End)
+#  Mixed-Signal Sigma-Delta ADC Pipeline (End-to-End)
 
 A complete, end-to-end mixed-signal engineering project demonstrating the design, simulation, and mathematical optimization of a **Sigma-Delta Analog-to-Digital Converter**. 
 
 This repository documents the full pipeline: starting from a transistor/op-amp level continuous-time analog modulator in **LTspice**, transitioning to a high-speed digital decimation filter written in **Verilog (Vivado)**, and concluding with DSP performance analysis using **Python**.
 
-### 🏆 Executive Summary & Key Achievement
+###  Executive Summary & Key Achievement
 The core engineering achievement of this project was identifying and resolving a fundamental architectural bottleneck in the digital DSP back-end. 
 
 Initially, a **1st-order CIC decimation filter** was implemented. However, because the analog front-end was a 2nd-order modulator, the 1st-order digital filter failed to adequately suppress the $+40\text{ dB/decade}$ shaped quantization noise. This resulted in severe spectral leakage and an unusable **Signal-to-Noise Ratio (SNR) of 0.97 dB**.
@@ -13,14 +13,14 @@ By applying DSP theory, the digital architecture was upgraded to a **3rd-order C
 
 ---
 
-## 🗂️ Repository Structure (Hub & Spoke)
+##  Repository Structure (Hub & Spoke)
 
 This repository is divided into distinct engineering domains. Click on any folder to view its dedicated documentation and source files.
 
-* 📁 **[1_Analog_Front_End_LTspice](./1_Analog_Front_End_LTspice/)** - 2nd-Order Continuous-Time Modulator schematics and transient analysis.
-* 📁 **[2_Digital_Back_End_Vivado](./2_Digital_Back_End_Vivado/)** - Verilog RTL for the 3rd-order CIC filter, State Machines, and UART Transmitter.
-* 📁 **[3_Signal_Processing_Python](./3_Signal_Processing_Python/)** - Python DSP scripts for Blackman-Harris windowing, FFT extraction, and SNR calculations.
-* 📁 **[4_Waveforms_and_Screenshots](./4_Waveforms_and_Screenshots/)** - High-resolution timing diagrams, analog transients, and frequency spectrum plots.
+* 📁 **[1_Analog_Front_End_LTspice]** - 2nd-Order Continuous-Time Modulator schematics and transient analysis.
+* 📁 **[2_Digital_Back_End_Vivado]** - Verilog RTL for the 3rd-order CIC filter, State Machines, and UART Transmitter.
+* 📁 **[3_Signal_Processing_Python]** - Python DSP scripts for Blackman-Harris windowing, FFT extraction, and SNR calculations.
+* 📁 **[4_Waveforms_and_Screenshots]** - High-resolution timing diagrams, analog transients, and frequency spectrum plots.
 
 ---
 
